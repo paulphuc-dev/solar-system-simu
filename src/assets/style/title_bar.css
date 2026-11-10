@@ -1,0 +1,14 @@
+.hud-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hud-svg {
+  width: 100%;
+  height: 100%;
+}

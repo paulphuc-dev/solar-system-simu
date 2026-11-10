@@ -1,0 +1,44 @@
+.hud-buttons-container {
+  position: absolute;  
+  top: 150px;          
+  left: 20px;          
+  display: flex;
+  flex-direction: column; 
+  gap: 12px;             
+  z-index: 10;
+}
+
+.hud-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 20vw;                 
+  max-width: 220px;            
+  min-width: 140px;            
+
+  padding: 12px 18px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(10, 30, 35, 0.95),
+    rgba(5, 15, 18, 0.95)
+  );
+
+  border: 2px solid #2dd4bf;
+  border-radius: 8px;
+
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(12px, 1.2vw, 14px); /* ⬅ chữ cũng responsive */
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  position: relative;
+
+  box-shadow:
+    0 0 8px rgba(45, 212, 191, 0.6),
+    inset 0 0 10px rgba(45, 212, 191, 0.15);
+
+  transition: all 0.25s ease;
+}

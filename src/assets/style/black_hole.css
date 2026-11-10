@@ -1,0 +1,21 @@
+.blackhole-container {
+    position: absolute;
+    top: 20%;       
+    left: 95%;      
+    transform: translate(-50%, -50%); 
+    pointer-events: none;
+  }
+  
+  
+.blackhole {
+    width: 55px;
+    height: 55px;
+    background-color: black;
+    border-radius: 50%; 
+    box-shadow:
+      0 0 20px rgba(255,255,255,0.8),
+      0 0 40px rgba(255,255,255,0.6),
+      0 0 60px rgba(255,255,255,0.4);
+    transition: box-shadow 0.5s linear;
+}
+  

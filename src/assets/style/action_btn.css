@@ -1,0 +1,33 @@
+.hex-button {
+  position: relative;
+  width: 60px;              
+  aspect-ratio: 1;          
+  background: linear-gradient(180deg, rgba(43, 121, 143, 0.95), rgba(5,15,18,0.95));
+  clip-path: polygon(
+    25% 5%, 75% 5%, 95% 50%, 75% 95%, 25% 95%, 5% 50%
+  ); 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 10px;      /* khoảng cách nhỏ */
+  box-shadow:
+    0 0 6px rgba(45,212,191,0.6),
+    inset 0 0 8px rgba(45,212,191,0.15);
+  transition: all 0.25s ease;
+}
+
+.hex-button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 12px rgba(45,212,191,0.9),
+    inset 0 0 12px rgba(45,212,191,0.25);
+}
+
+.hex-button i {
+  font-size: 15px;
+}

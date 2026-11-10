@@ -1,0 +1,30 @@
+.tracer-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 6;
+}
+
+.meteor-head {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  box-shadow:
+    0 0 12px 6px rgba(255,255,255,0.9),
+    0 0 30px 14px rgba(150,200,255,0.6);
+}
+
+.meteor-trail {
+  position: absolute;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0),
+    rgba(200,230,255,0.9)
+  );
+  transform-origin: left center;
+  filter: blur(0.5px);
+  opacity: 1;
+}

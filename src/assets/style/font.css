@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Orbitron";
+    src: url("/src/assets/fonts/Orbitron-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+  
+:root {
+    --font-space: "Polaris Space", sans-serif;
+}
+  

@@ -1,0 +1,150 @@
+.planet-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 15, 0.6);
+    backdrop-filter: blur(6px);
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .planet-panel {
+    width: 85%;
+    height: 80%;
+    background: linear-gradient(145deg, #081926, #020b14);
+    border: 2px solid #2dd4bf;
+    box-shadow:
+      0 0 30px rgba(45, 212, 191, 0.4),
+      inset 0 0 50px rgba(0, 255, 255, 0.08);
+    padding: 20px;
+    font-family: Orbitron;
+  
+    display: flex;
+    flex-direction: column;
+  }  
+  
+  /* Header */
+  .planet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(45, 212, 191, 0.4);
+    padding-bottom: 10px;
+  }
+  
+  .planet-header h2 {
+    letter-spacing: 2px;
+  }
+  
+  .planet-header button {
+    background: none;
+    border: none;
+    color: #2dd4bf;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Grid */
+  .planet-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 240px;
+    gap: 20px;
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 6px;
+  }
+   
+  /* Card */
+  .planet-card {
+    border: 1px solid rgba(45, 212, 191, 0.4);
+    padding: 12px;
+    position: relative;
+    background: rgba(5, 20, 30, 0.6);
+    overflow: hidden;
+  }
+  
+  .planet-card h3 {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .planet-card-body {
+    display: flex;
+    height: 85%;
+  }
+  
+  .planet-card-body img {
+    width: 45%;
+    object-fit: cover;
+    border: 1px solid rgba(45, 212, 191, 0.4);
+  }
+  
+  /* Actions */
+  .planet-card-actions {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .learn-more {
+    color: #2dd4bf;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  .detail-btn {
+    background: transparent;
+    border: 1px solid #2dd4bf;
+    color: #2dd4bf;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-family: Orbitron;
+    transition: 0.2s;
+  }
+  
+  .detail-btn:hover {
+    background: #2dd4bf;
+    color: #001015;
+  }
+
+  /* Scrollbar width */
+  .planet-grid::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  /* Track nền */
+  .planet-grid::-webkit-scrollbar-track {
+    background: rgba(0, 255, 255, 0.05); /* rất mờ, tạo hiệu ứng không gian */
+    border-radius: 10px;
+    box-shadow:
+      inset 0 0 5px rgba(0, 255, 255, 0.2);
+  }
+
+  /* Thumb (cái kéo) */
+  .planet-grid::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00fff7, #2dd4bf);
+    border-radius: 10px;
+    box-shadow:
+      0 0 8px #00fff7,
+      inset 0 0 6px #00e0e6;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  /* Thumb hover hiệu ứng glow */
+  .planet-grid::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #00fff7, #2dd4bf);
+    box-shadow:
+      0 0 12px #00fff7,
+      inset 0 0 8px #00e0e6;
+  }
+
+  

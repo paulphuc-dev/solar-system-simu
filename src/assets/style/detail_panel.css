@@ -1,0 +1,155 @@
+/* overlay toàn màn hình */
+.earth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* panel chính */
+.earth-panel {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+  background: linear-gradient(180deg, #0a1b2a, #07131f);
+  border: 2px solid #2dd4bf;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+  padding: 20px;
+  font-family: Orbitron, sans-serif;
+}
+
+/* header */
+.earth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e6faff;
+  text-transform: uppercase;
+}
+
+/* body - canvas + info */
+.earth-body {
+  display: flex;
+  flex: 1; 
+  gap: 20px;
+  min-height: 0;
+}
+
+/* canvas bên trái */
+.earth-canvas-card {
+  flex: 1.2; /* chiếm nhiều hơn info */
+  border: 1px solid #2dd4bf;
+  background: radial-gradient(circle at center, #020b14, #000);
+  display: flex;
+}
+
+.earth-canvas-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* giữ tỉ lệ, cắt phần dư */
+}
+
+/* canvas stretch 100% */
+.earth-canvas-card canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* info bên phải */
+.earth-info {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 3fr 1fr; /* text dài hơn carousel */
+  gap: 16px;
+}
+
+/* text giới thiệu */
+.earth-text {
+  border: 1px solid #2dd4bf;
+  padding: 16px;
+  color: #bfefff;
+  background: rgba(5, 20, 30, 0.6);
+  overflow-y: auto;
+}
+
+/* carousel */
+.earth-carousel {
+  border: 1px solid #2dd4bf;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+}
+
+.carousel-track img {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #2dd4bf;
+}
+
+/* nút tắt panel */
+.earth-header button {
+  background: none;
+  border: 2px solid #2dd4bf;
+  color: #2dd4bf;
+  font-size: 20px;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.earth-header button:hover {
+  background: #2dd4bf;
+  color: #07131f;
+  box-shadow: 0 0 10px #2dd4bf, 0 0 20px #2dd4bf, 0 0 30px #2dd4bf;
+}
+
+@media (max-width: 768px) {
+  .earth-panel {
+    width: 95%;
+    height: 95%;
+    padding: 12px;
+  }
+
+  .earth-body {
+    flex-direction: column; /* stack dọc */
+    gap: 12px;
+  }
+
+  .earth-canvas-card {
+    flex: none;
+    height: 50vh; /* canvas chiếm nửa chiều cao màn hình */
+  }
+
+  .earth-info {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+  }
+
+  .earth-text {
+    max-height: 40vh;
+  }
+
+  .earth-carousel {
+    max-height: 25vh;
+  }
+
+  .carousel-track img {
+    width: 120px;
+    height: 80px;
+  }
+}
